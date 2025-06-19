@@ -14,4 +14,4 @@ COPY	conf/nginx.conf /etc/nginx/nginx.conf
 RUN	chmod 755 /var/www/html
 RUN	chown -R www-data:www-data /var/www/html
 RUN	mv /var/www/html/index.nginx-debian.html /var/www/html/index.html
-CMD	["nginx", "-g", "daemon off;"]
+#CMD	["nginx", "-g", "daemon off;"]

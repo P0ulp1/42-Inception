@@ -23,4 +23,4 @@ RUN	chmod +x /tmp/autoconfig-wp.sh
 ENTRYPOINT	["/bin/bash", "/tmp/autoconfig-wp.sh"]
 
 #Launching PHP-FPM?
-#RUN	/usr/sbin/php-fpm7.3 -F
+RUN	/usr/sbin/php-fpm7.4 -F
