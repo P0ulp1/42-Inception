@@ -21,4 +21,5 @@ COPY conf/wp-conf.sh /tmp/wp-conf.sh
 RUN chmod +x /tmp/wp-conf.sh
 RUN cd /tmp
 ENTRYPOINT /tmp/wp-conf.sh
-#RUN /usr/sbin/php-fpm7.4 -F
+RUN mkdir /run/php
+ENTRYPOINT /usr/sbin/php-fpm7.4 -F

@@ -53,13 +53,13 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/Users/phautena/data/wordpress'
+      device: '/home/phautena/data/wordpress'
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/Users/phautena/data/mariadb'
+      device: '/home/phautena/data/mariadb'
 
 networks:
   inception:
