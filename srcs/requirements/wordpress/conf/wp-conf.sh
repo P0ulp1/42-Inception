@@ -1,6 +1,7 @@
 #!/bin/bash
 sleep 10
 if [ ! -f /var/www/wordpress/wp-config.php ]; then
+	echo "CREATING WORDPRESS INSTALLATION"
 	wp config create --allow-root \
 			--dbname=$SQL_DATABASE \
 			--dbuser=$SQL_USER \
