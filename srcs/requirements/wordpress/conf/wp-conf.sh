@@ -8,5 +8,7 @@ if [ ! -f /var/www/wordpress/wp-config.php ]; then
 			--dbhost=mariadb:3306 --path='/var/www/wordpress'
 	wp --allow-root core install --url=localhost --title=inception --admin_user=$WP_ADMIN --admin_email=phautena@student.42.fr --path='/var/www/wordpress'
 	wp --allow-root user update $WP_ADMIN --user_pass=$WP_APASS --path='/var/www/wordpress'
+	wp --allow-root user create $WP_USER paul.hautenauve@yahoo.com --user_pass=$WP_UPASS --path='/var/www/wordpress'
 fi
 [ -d /run/php ] || mkdir /run/php
+/usr/sbin/php-fpm7.4 -F
