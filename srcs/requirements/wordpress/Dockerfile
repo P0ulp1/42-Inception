@@ -19,6 +19,5 @@ RUN mv wp-cli.phar /usr/local/bin/wp
 
 COPY conf/wp-conf.sh /tmp/wp-conf.sh
 RUN chmod +x /tmp/wp-conf.sh
-RUN cd /tmp
-RUN ["/tmp/wp-conf.sh"]
-#ENTRYPOINT /usr/sbin/php-fpm7.4 -F
+RUN /bin/bash /tmp/wp-conf.sh
+ENTRYPOINT /usr/sbin/php-fpm7.4 -F
